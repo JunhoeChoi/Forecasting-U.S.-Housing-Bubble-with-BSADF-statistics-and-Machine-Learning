@@ -2,7 +2,7 @@ library(psymonitor)  # For testting for bubble monitoring
 library(ggplot2)     
 library(knitr)       
 
-hpi      <-read.csv("/Users/choejunhoe/Desktop/Housingbubbleproject/MLProject/nominal_hpi.csv")
+hpi      <-read.csv("nominal_hpi.csv")
 hpi$DATE <- as.Date(hpi$DATE)
 
 y        <- hpi$rent
@@ -46,5 +46,5 @@ o_rent= rep(0,n)
 bubble_rent=c(o_rent, ind95)
 rent_bubble<-cbind(hpi,bubble_rent)
 
-write.csv(rent_bubble,"/Users/choejunhoe/Desktop/Housingbubbleproject/MLProject/rent_bubble.csv")
+write.csv(rent_bubble,"rent_bubble.csv")
 
