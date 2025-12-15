@@ -2,7 +2,7 @@ library(psymonitor)  # For testting for bubble monitoring
 library(ggplot2)     
 library(knitr)       
 
-hpi      <-read.csv("/Users/choejunhoe/Desktop/Housingbubbleproject/MLProject/nominal_hpi.csv")
+hpi      <-read.csv("nominal_hpi.csv")
 hpi$DATE <- as.Date(hpi$DATE)
 
 y        <- hpi$hpi
@@ -44,4 +44,4 @@ o= rep(0,25)
 bubble=c(o, ind95)
 hpi_bubble<-cbind(hpi,bubble)
 
-write.csv(hpi_bubble,"/Users/choejunhoe/Desktop/Housingbubbleproject/MLProject/hpi_bubble.csv")
+write.csv(hpi_bubble,"hpi_bubble.csv")
